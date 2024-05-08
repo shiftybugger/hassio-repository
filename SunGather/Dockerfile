@@ -13,7 +13,7 @@ RUN apk add --no-cache py3-pip yq
 RUN python3 -m venv venv
 
 RUN source ./venv/bin/activate && \
-    pip install --no-cache-dir --upgrade -r requirements.txt
+    pip install --no-cache-dir --upgrade -r requirements.txt --break-system-packages
 #RUN pip install --no-cache-dir --upgrade pycryptodomex==3.11.0 -r requirements.txt
 
 COPY SunGather/SunGather/ /
